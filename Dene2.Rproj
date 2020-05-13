@@ -1,0 +1,65 @@
+library(dplyr)
+df <-rawReport
+ head(df)
+str(df) 
+summary(df)
+df%>%
+select(countryName, death) %>%
+  filter(death>0)
+df <- read.csv("https://raw.githubusercontent.com/ulklc/covid19-timeseries/master/countryReport/raw/rawReport.csv")
+
+dfVaka <- df[df$day==Sys.Date()-1 ,][,c("countryName", "confirmed")]
+dfOncekiVaka <- df[df$day == Sys.Date() -2,][,c("countryName", "confirmed")]
+
+dfVaka["vakasayisi"] = dfVaka[,c("confirmed")] - dfOncekiVaka[, c("confirmed")]
+print(dfVaka[,c("countryName", "vakasayisi")])
+
+df(head)
+head(df)   
+select(countryName)
+ 
+df$countryName  
+
+head(df, n=5) 
+tail(df, n=10)
+df[df$death>0,]
+
+Veri <- data.frame("Numara" = 1:3, "Sinif"=c(4,6,8), "İsim" = c('Yiğithan','Yağmur','Alp'), stringsAsFactors = FALSE )
+Veri
+Veri[1,"Sinif"]<-10
+Veri
+rbind(Veri,list(4,5,"Ali"))
+cbind(Veri,Sehir=c("Kocaeli"))
+names(df)
+nrow(df)
+str(df)
+head(df)
+library(dplyr)
+help dplyr
+?dplyr
+install.packages("drat")
+install.packages("dplyr", verbose=T)
+install.packages("dplyr")
+library(dplyr)
+sample_n(df,6)
+sample_frac(df,0.0002)
+colSums(is.na(df))
+str(df)
+select(df,countryName)
+filter(df, countryName=="Andorra", death>0,)
+df$countryName %>%
+  summary(countryName)
+df %>% group_by(countryName) %>%
+ summarise(ulke_sayisi=n())#ülke sayısını bulmak için
+filter(df, countryName=="Andorra")
+df
+str(rawReport)
+sample_n(rawReport,106)# istenilen sayıda satır göstermk içn
+
+rawReport
+p2
+
+df_merge = merge(rawReport, p2, by.x=3, by.y = 2)
+mean(p2, )
+
+
